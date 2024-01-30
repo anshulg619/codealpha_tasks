@@ -1,0 +1,96 @@
+package com.tester;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.Hotel.Booking;
+import com.Hotel.Hotel;
+
+
+public class Tester {
+
+	public static void main(String[] args) {
+		ArrayList<Hotel> list = new ArrayList<>();
+		ArrayList<Booking> bookList = new ArrayList<>();
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			boolean flag = true;
+			while (flag) {
+				System.out.println("Application menu: \n 1.Admin \n" + " 2.Hotel Search \n "
+						+ "3.Book a hotel Room\n " + "4.Cancel booking\n" + "0.Exit");
+				int choice = sc.nextInt();
+				switch (choice) {
+
+				case 1:
+					
+					break;
+					
+				case 2: 
+					for (Hotel i: list) {					
+						System.out.println(i.toString());						
+					}
+					break;
+					
+				case 3: 
+					/*String customerName, int age, String hotelName, int roomNumber, LocalDateTime checkInDate,
+					LocalDateTime checkOutDate*/
+					System.out.println("Enter Full Name:");
+					String name = sc.next();
+					
+					System.out.println("Enter Age");
+					int age = sc.nextInt();
+					
+					System.out.println("Enter Hotel Name");
+					String hotel = sc.next();
+					
+					System.out.println("Enter Room No.to be booked: ");
+					int room = sc.nextInt();
+					
+					System.out.println("Enter CheckIn date YYYY-MM-DD");
+					LocalDateTime checkIn = LocalDateTime.parse(sc.next());
+					
+					System.out.println("Enter CheckOut date YYYY-MM-DD");
+					LocalDateTime checkOut = LocalDateTime.parse(sc.next());
+					
+					System.out.println("To confirm Your Hotel Room Booking Enter YES or NO: ");
+					String confirm=sc.next().toUpperCase();
+					
+					if(confirm=="YES") {
+						
+					}
+					
+					
+					list.add(new Student(name, className,grades));
+					for (Booking i: bookList) {
+						System.out.println(i.toString());
+					}
+					
+				case 4:
+					double low =list.get(0).getTotal();
+					for (Student i : list) {
+						if(low>i.getTotal()) low=i.getTotal();
+						else continue;
+					}
+					
+					System.out.println("Lowest Score Among all Student is: "+ low);
+					break;
+					
+				case 0 : 
+					System.out.println("closing the application");
+					flag=false;
+					break;
+					
+				default:
+					System.out.println("please enter a valid choice");
+					
+				}
+				
+			}
+
+		}
+
+	}
+
+
+}

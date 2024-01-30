@@ -1,0 +1,45 @@
+package com.Hotel;
+
+import java.time.LocalDateTime;
+
+public class Booking {
+		String customerName;
+		int age;
+		String hotelName;
+		int roomNumber;
+		LocalDateTime checkInDate;
+		LocalDateTime checkOutDate;
+		public Booking(String customerName, int age, String hotelName, int roomNumber, LocalDateTime checkInDate,
+				LocalDateTime checkOutDate) {
+			super();
+			this.customerName = customerName;
+			this.age = age;
+			this.hotelName = hotelName;
+			this.roomNumber = roomNumber;
+			this.checkInDate = checkInDate;
+			this.checkOutDate = checkOutDate;
+		}
+		public String getCustomerName() {
+			return customerName;
+		}
+		public String getHotelName() {
+			return hotelName;
+		}
+		public int getRoomNumber() {
+			return roomNumber;
+		}
+		public LocalDateTime getCheckInDate() {
+			return checkInDate;
+		}
+		public LocalDateTime getCheckOutDate() {
+			return checkOutDate;
+		}
+		@Override
+		public String toString() {
+			return "Booking [customerName=" + customerName + ", age=" + age + ", hotelName=" + hotelName
+					+ ", roomNumber=" + roomNumber + ", checkInDate=" + checkInDate + ", checkOutDate=" + checkOutDate
+					+ "]";
+		}
+		
+		
+}

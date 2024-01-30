@@ -1,0 +1,5 @@
+package ExceptionsAndValidations;
+
+public class InvalidInputException {
+
+}
